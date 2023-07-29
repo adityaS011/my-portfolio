@@ -58,20 +58,22 @@ const services = [
   {
     title: "Frontend Developer",
     icon: web,
+    link: "#"
   },
   {
     title: "Mern Stack Developer",
     icon: backend,
+    link: "#"
   },
   {
     title: "My Github",
     icon: github1,
-    source_code_link: "https://github.com/intelligence2002/",
+    link: "https://github.com/intelligence2002/",
   },
   {
     title: "My LinkedIn",
     icon: linkedin,
-    source_code_link: "https://www.linkedin.com/in/adi008/",
+    link: "https://www.linkedin.com/in/adi008/",
   },
 ];
 
