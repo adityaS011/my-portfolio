@@ -25,7 +25,7 @@ const ServiceCard = ({ index, title, icon }) => (
           src={icon}
           alt='web-development'
           className='w-16 h-16 object-contain cursor-pointer '
-          onClick={() => window.open("https://www.linkedin.com/in/adi008/", "_blank")}
+          
         />
        
 
