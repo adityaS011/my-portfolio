@@ -233,7 +233,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: jobit,
+    image: tripguide,
     source_code_link: "https://crpyto-transaction-app.netlify.app/",
   },
   {
@@ -258,7 +258,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: jobit,
     source_code_link: "https://bbdec-gfg-sc.netlify.app/",
   },
 ];
