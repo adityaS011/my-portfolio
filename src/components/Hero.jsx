@@ -44,7 +44,7 @@ const Hero = () => {
 
       {/* Show the image on small devices */}
       {isSmallScreen && (
-        <div className='flex justify-center items-center mt-18'>
+        <div className='flex flex-col justify-center items-center mt-5'>
           <img
             src='https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-4506461-3738664.png'
             alt='Web Developer'
