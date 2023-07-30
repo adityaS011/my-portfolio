@@ -103,10 +103,6 @@ const technologies = [
     icon: mongodb,
   },
 
-  {
-    name: "git",
-    icon: git,
-  },
 
 ];
 
