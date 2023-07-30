@@ -1,9 +1,23 @@
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import React, { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 640); // Change the value (640) to the screen width you want for small devices
+    };
+
+    handleResize(); // Check initial screen size
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -25,7 +39,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      {!isSmallScreen && <ComputersCanvas />} {/* Render ComputersCanvas only on non-small devices */}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
