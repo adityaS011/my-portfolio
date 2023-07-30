@@ -58,20 +58,22 @@ const services = [
   {
     title: "Frontend Developer",
     icon: web,
+    link: "#"
   },
   {
     title: "Mern Stack Developer",
     icon: backend,
+    link: "#"
   },
   {
     title: "My Github",
     icon: github1,
-    source_code_link: "https://github.com/intelligence2002/",
+    link: "https://github.com/intelligence2002/",
   },
   {
     title: "My LinkedIn",
     icon: linkedin,
-    source_code_link: "https://www.linkedin.com/in/adi008/",
+    link: "https://www.linkedin.com/in/adi008/",
   },
 ];
 
@@ -89,20 +91,8 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
   },
   {
     name: "Node JS",
@@ -112,22 +102,12 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
+
   {
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+
 ];
 
 const experiences = [
