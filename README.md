@@ -12,14 +12,10 @@
     This is the repository for my portfolio website built using Vite, React, and React Three Fiber with 3D elements.
   </p>
 
-  <h2>Preview</h2>
-  <p>
-    [Insert screenshot or GIF of your portfolio website]
-  </p>
 
   <h2>Live Demo</h2>
   <p>
-    You can check out the live demo of this project at [insert link to your deployed website].
+    https://adityasingh-portfolio.netlify.app
   </p>
 
   <h2>Technologies Used</h2>
