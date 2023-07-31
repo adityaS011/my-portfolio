@@ -68,7 +68,7 @@ const services = [
   {
     title: "My Github",
     icon: github1,
-    link: "https://github.com/intelligence2002/",
+    link: "https://github.com/adityaS011/",
   },
   {
     title: "My LinkedIn",
