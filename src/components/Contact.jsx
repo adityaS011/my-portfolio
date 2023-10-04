@@ -121,9 +121,9 @@ const public_key = "UZBYWlsxmFADkV1bJ"
             {loading ? "Sending..." : "Send"}
           </button>
           <button
-            type='submit'
+            type='text'
             className='bg-tertiary   font-medium py-3 px-8 rounded-xl outline-none w-fit text-secondary font-bold shadow-md shadow-primary'
-            onClick={() => window.open("https://drive.google.com/file/d/1xD_03hfzedmBBqPuU91k05IJ9WUa5wB9/view?usp=drive_link", "_blank")}
+            onClick={() => window.open("https://drive.google.com/file/d/1ZKchXK8vLWOnh2adgZgI15dqN46gLcnE/view?usp=sharing", "_blank")}
           >
              
            {"My Resume"}
