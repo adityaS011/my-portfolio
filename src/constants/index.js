@@ -56,12 +56,12 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Frontend Developer",
+    title: "Mern Stack Developer ",
     icon: web,
     link: "#"
   },
   {
-    title: "Mern Stack Developer",
+    title: "UI/UX Designer",
     icon: backend,
     link: "#"
   },
@@ -190,7 +190,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Flipkart Clone",
+    name: "Ecommerce Clone",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     
