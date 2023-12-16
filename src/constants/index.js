@@ -109,7 +109,7 @@ const technologies = [
 const experiences = [
   {
     title: "Freelance Website Developer",
-    company_name: "Self Emplooyed",
+    company_name: "Self Employed",
     icon: starbucks,
     iconBg: "#383E56",
     date: "Oct 2022 - Nov 2022",
