@@ -7,8 +7,7 @@ import github from "./github.png";
 import github1 from "./github1.png";
 import coursera from "./coursera.png";
 import menu from "./menu.svg";
-import dashboard from "./dashboard.png";
-import rapidr from "./rapidr.png"
+
 import close from "./close.svg";
 import certificatejs from "./certificatejs.png" ;
 import certificatereactb from "./certificatereactb.png" ;
@@ -32,7 +31,8 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import linkedin from "./linkedin.png";
-
+import dashboard from "./dashboard.png";
+import rapidr from "./rapidr.png"
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
@@ -57,6 +57,8 @@ export {
   figma,
   git,
   html,
+  dashboard,
+  rapidr,
   javascript,
   mongodb,
   nodejs,
