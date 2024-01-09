@@ -28,6 +28,7 @@ import {
   jobit,
   tripguide,
   dashboard,
+  rapidr,
   threejs,
 } from "../assets";
 
@@ -191,27 +192,6 @@ const projects = [
     image: carrent,
     source_code_link: "https://mern-clone-flipkart-p2p.netlify.com/",
   },
-  {
-    name: "Crypto Exchange",
-    description:
-      "User-friendly web3 cryptocurrency exchange platform, enabling efficient trading across various blockchain networks. Embracing decentralized technology.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodeJs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "solidity",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://crpyto-transaction-app.netlify.app/",
-  },
 {
     name: "Next.js Dasboard App",
     description:
@@ -232,6 +212,48 @@ const projects = [
     ],
     image: dashboard,
     source_code_link: "https://dashboard-graff.netlify.app/",
+  },
+  {
+    name: "Rapid Retail Ecommerce",
+    description:
+      "Employed React for modular UI development, emphasizing component reusability and maintainability. Utilized Bootstrap to implement responsive components, ensuring optimal user experiences on various devices",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Bootstrap",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: rapidr,
+    source_code_link: "https://rapid-retail-ecommerce.netlify.app/",
+  },
+  {
+    name: "Crypto Exchange",
+    description:
+      "User-friendly web3 cryptocurrency exchange platform, enabling efficient trading across various blockchain networks. Embracing decentralized technology.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodeJs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "solidity",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://crpyto-transaction-app.netlify.app/",
   },
   {
     name: "College Chapter Website",
