@@ -216,7 +216,7 @@ const projects = [
   {
     name: "Rapid Retail Ecommerce",
     description:
-      "Employed React for modular UI development, emphasizing component reusability and maintainability. Utilized Bootstrap to implement responsive components, ensuring optimal user experiences on various devices",
+      "Employed React for modular UI development, emphasizing component reusability and maintainability. Utilized Bootstrap to implement responsive components.",
     tags: [
       {
         name: "react",
