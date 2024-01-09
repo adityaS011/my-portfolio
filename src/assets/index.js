@@ -7,6 +7,7 @@ import github from "./github.png";
 import github1 from "./github1.png";
 import coursera from "./coursera.png";
 import menu from "./menu.svg";
+import dashboard from "./dashboard.png";
 import close from "./close.svg";
 import certificatejs from "./certificatejs.png" ;
 import certificatereactb from "./certificatereactb.png" ;
