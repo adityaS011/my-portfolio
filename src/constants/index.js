@@ -195,7 +195,7 @@ const projects = [
 {
     name: "Next.js Dasboard App",
     description:
-      "Developed a Dashboard with dynamic UI elements using React and Next.js for enhanced modularity and maintainability. Leveraged Next.js API Routes for seamless backend integration, facilitating efficient data fetching and handling.",
+      "Developed a Dashboard with dynamic UI elements using React and Next.js for enhanced modularity and maintainability. Leveraged Next.js API Routes for facilitating efficient data fetching and handling.",
     tags: [
       {
         name: "react",
