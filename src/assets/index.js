@@ -7,6 +7,7 @@ import github from "./github.png";
 import github1 from "./github1.png";
 import coursera from "./coursera.png";
 import menu from "./menu.svg";
+import vibeclub from "./vibeclub.png";
 
 import close from "./close.svg";
 import certificatejs from "./certificatejs.png" ;
@@ -49,6 +50,7 @@ export {
   certificatefcc,
   github,
   github1,
+  vibeclub,
   coursera,
   menu,
   close,
