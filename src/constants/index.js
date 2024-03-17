@@ -24,6 +24,7 @@ import {
   certificatejs,
   certificatereactb,
   certificatefcc,
+  vibeclub,
   carrent,
   jobit,
   tripguide,
@@ -167,6 +168,32 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Vibe Club",
+    description:
+      "A platform to connect people, engage in activities or celebrations and craft meaningful connections.",
+    
+      tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "nodeJs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: vibeclub,
+    source_code_link: "https://vibe-club-nine.vercel.app/",
+  },
+{
     name: "Ecommerce Clone",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
