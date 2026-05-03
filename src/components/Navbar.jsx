@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
@@ -29,8 +29,8 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      } w-full flex items-center py-4 fixed top-0 z-20 transition-all duration-300 ${
+        scrolled ? "bg-black/70 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
@@ -42,20 +42,20 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+          <img src={logo} alt='logo' className='w-8 h-8 object-contain' />
+          <p className='text-white text-[15px] font-semibold cursor-pointer flex tracking-tight'>
             Aditya Singh &nbsp;
-            <span className='sm:block hidden'> | Web Developer</span>
+            <span className='sm:block hidden text-white/55'> | Frontend Engineer</span>
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row gap-8 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2 backdrop-blur-xl'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              } hover:text-white text-[13px] font-medium cursor-pointer transition-colors`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>

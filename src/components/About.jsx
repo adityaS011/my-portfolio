@@ -1,4 +1,3 @@
-import React from "react";
 import {Tilt} from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -8,28 +7,30 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon, link }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt
+    className='xs:w-[250px] w-full'
+    options={{
+      max: 45,
+      scale: 1,
+      speed: 450,
+    }}
+  >
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+      className='w-full rounded-2xl border border-white/10 bg-white/[0.04] shadow-card'
     >
       <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        className='rounded-2xl py-6 px-10 min-h-[210px] flex justify-evenly items-center flex-col backdrop-blur-xl'
       >
         <img
           src={icon}
           alt='web-development'
-          className='w-16 h-16 object-contain cursor-pointer '
+          className='w-14 h-14 object-contain cursor-pointer opacity-90'
            onClick={() => window.open(link, "_blank")}
         />
 
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
+        <h3 className='text-white text-[18px] font-semibold tracking-tight text-center'>
           {title}
         </h3>
       </div>
@@ -38,24 +39,45 @@ const ServiceCard = ({ index, title, icon, link }) => (
 );
 
 const About = () => {
+  const strengths = [
+    "Early-stage SaaS experience at Atomicwork, building product-facing frontend surfaces where speed, clarity, and iteration matter.",
+    "FinTech product experience at Mysa, working on detail-heavy flows where state, validation, API reliability, and UI precision matter.",
+    "Comfortable owning frontend work through ambiguity: clarifying requirements, shaping UI states, integrating APIs, and polishing the final experience.",
+  ];
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={`${styles.sectionSubText} text-white/45`}>Introduction</p>
+        <h2 className='max-w-4xl text-white font-black tracking-tight md:text-[72px] sm:text-[56px] xs:text-[44px] text-[34px] leading-tight'>
+          Frontend engineer for startup product teams.
+        </h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-5 text-white/60 text-[18px] max-w-3xl leading-[32px]'
       >
-        I'm an engineering student skilled in MERN stack developement with a strong background in C++
-        programming. I love working with technology and solving problems. I specialize in creating powerful
-        and efficient web applications using MongoDB, Express, React, and Node.js. I'm always eager to learn
-        and grow in the software development field. Let's work together to bring your ideas to life!
+        I am a frontend engineer who has worked inside early-stage SaaS and
+        FinTech teams, where product requirements move fast and the UI still
+        has to feel stable, clear, and trustworthy. I care about the whole
+        frontend surface: component design, state management, API integration,
+        edge cases, responsiveness, and the interaction details that make a
+        product feel mature.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-10 grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-3'>
+        {strengths.map((strength) => (
+          <div
+            key={strength}
+            className='rounded-2xl border border-white/10 bg-white/[0.04] p-6 text-[15px] leading-7 text-white/72 backdrop-blur-xl'
+          >
+            {strength}
+          </div>
+        ))}
+      </div>
+
+      <div className='mt-14 flex flex-wrap gap-10'>
 
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

@@ -33,7 +33,9 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import linkedin from "./linkedin.png";
 import dashboard from "./dashboard.png";
+import flowai from "./flowai.png";
 import rapidr from "./rapidr.png"
+import trackly from "./trackly.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
@@ -60,7 +62,9 @@ export {
   git,
   html,
   dashboard,
+  flowai,
   rapidr,
+  trackly,
   javascript,
   mongodb,
   nodejs,

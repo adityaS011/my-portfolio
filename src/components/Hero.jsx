@@ -1,66 +1,165 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { styles } from "../styles";
-import React, { useEffect, useState } from "react";
 
 const Hero = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 640);
-    };
+  const stats = [
+    { value: "Judgment", label: "turning ambiguity into clear UI" },
+    { value: "Architecture", label: "state, APIs, reusable systems" },
+    { value: "Polish", label: "responsive, trustworthy product UX" },
+  ];
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const introOpacity = useTransform(scrollYProgress, [0, 0.32], [1, 0]);
+  const introY = useTransform(scrollYProgress, [0, 0.32], [0, -52]);
+  const showcaseOpacity = useTransform(scrollYProgress, [0.2, 0.42, 0.95], [0, 1, 1]);
+  const showcaseY = useTransform(scrollYProgress, [0.2, 0.42], [80, 0]);
+  const deviceScale = useTransform(scrollYProgress, [0.25, 0.68, 1], [0.82, 1.04, 0.98]);
+  const deviceRotate = useTransform(scrollYProgress, [0.25, 0.68, 1], [-7, 0, 4]);
+  const glowOpacity = useTransform(scrollYProgress, [0, 0.55, 1], [0.16, 0.42, 0.2]);
 
   return (
-    <section className={`relative w-full h-screen mx-auto `}>
-      <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-purple-400'>Aditya</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-gray-300`}>
-            I’m a web developer passionate about crafting dynamic,
-            <br className='sm:block hidden' />
-            responsive websites.
-          </p>
-        </div>
-      </div>
+    <section ref={heroRef} className='relative h-[220vh] w-full bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.16),rgba(5,8,22,0)_34%),linear-gradient(180deg,#050816_0%,#080a12_100%)]'>
+      <div className='sticky top-0 h-screen overflow-hidden'>
+        <motion.div
+          style={{ opacity: glowOpacity }}
+          className='absolute left-1/2 top-1/2 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white blur-[120px]'
+        />
 
-      {/* Show the image on small devices */}
-      <div className='flex justify-center items-center mt-0 pt-12'>
-        <div className='w-3/4 sm:w-1/4 pt-12 mt-12'>
-          <img
-            src='https://cdn3d.iconscout.com/3d/premium/thumb/web-developer-4506461-3738664.png'
-            alt='Web Developer'
-            className='pt-12 mt-12'
-          />
-        </div>
-      </div>
+        <motion.div
+          style={{ opacity: introOpacity, y: introY }}
+          className={`absolute inset-0 z-30 mx-auto flex max-w-6xl flex-col items-center justify-center ${styles.paddingX} pt-24 text-center`}
+        >
+          <div className='max-w-5xl'>
+            <p className='mb-5 text-[12px] sm:text-[14px] uppercase tracking-[0.28em] text-white/55'>
+              Frontend Engineer | SaaS + FinTech Startups
+            </p>
+            <h1 className='text-[48px] font-black leading-[0.95] tracking-tight text-white xs:text-[60px] sm:text-[84px] lg:text-[108px]'>
+              Hi, I&apos;m Aditya.
+            </h1>
+            <p className='mx-auto mt-6 max-w-3xl text-[19px] font-medium leading-8 text-white/66 sm:text-[24px] sm:leading-9'>
+              I build product interfaces for early-stage startups, turning
+              ambiguous requirements into reliable React experiences across
+              SaaS workflows, FinTech flows, APIs, state, and responsive UI.
+            </p>
 
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-purple-400 flex justify-center items-start p-2'>
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: 'loop',
-              }}
-              className='w-3 h-3 rounded-full bg-purple-400 mb-1'
-            />
+            <div className='mt-9 flex flex-wrap justify-center gap-3'>
+              <a
+                href='#projects'
+                className='rounded-full bg-white px-6 py-3 text-[14px] font-semibold text-black transition hover:bg-white/85'
+              >
+                View Work
+              </a>
+              <a
+                href='/AdityaSingh_Resume.pdf'
+                target='_blank'
+                rel='noreferrer'
+                className='rounded-full border border-white/20 bg-white/[0.04] px-6 py-3 text-[14px] font-semibold text-white transition hover:bg-white/10'
+              >
+                Resume
+              </a>
+              <a
+                href='https://www.linkedin.com/in/adi008/'
+                target='_blank'
+                rel='noreferrer'
+                className='rounded-full border border-white/20 bg-white/[0.04] px-6 py-3 text-[14px] font-semibold text-white transition hover:bg-white/10'
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
-        </a>
+        </motion.div>
+
+        <motion.div
+          style={{ opacity: showcaseOpacity, y: showcaseY }}
+          className={`pointer-events-none absolute inset-0 z-20 mx-auto grid max-w-7xl items-center gap-5 ${styles.paddingX} py-16 lg:grid-cols-[0.98fr_1.02fr] lg:gap-8 lg:pt-24`}
+        >
+          <div className='max-w-2xl text-left'>
+            <p className='mb-3 text-[12px] uppercase tracking-[0.28em] text-white/45'>
+              How I Work
+            </p>
+            <h2 className='text-[32px] font-black leading-[1.02] tracking-tight text-white xs:text-[42px] sm:text-[56px] xl:text-[62px]'>
+              I turn product complexity into calm frontend experiences.
+            </h2>
+            <p className='mt-4 max-w-xl text-[15px] leading-7 text-white/60 sm:text-[16px] sm:leading-7'>
+              My edge is not just building screens. It is understanding the
+              product problem, designing the right UI states, wiring data
+              carefully, handling edge cases, and making the final experience
+              feel stable under real startup pressure.
+            </p>
+
+            <div className='mt-5 grid gap-3 sm:grid-cols-3'>
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className='rounded-2xl border border-white/10 bg-white/[0.045] p-4 backdrop-blur-xl sm:min-h-[112px]'
+                >
+                  <p className='text-[18px] font-bold tracking-tight text-white'>{stat.value}</p>
+                  <p className='mt-1 text-[13px] leading-5 text-white/50'>{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <motion.div
+            style={{ scale: deviceScale, rotate: deviceRotate }}
+            className='relative mx-auto aspect-[4/3] w-full max-w-[500px] lg:max-w-[610px] xl:max-w-[660px]'
+          >
+            <div className='absolute inset-0 rounded-[38px] border border-white/15 bg-white/[0.05] p-3 shadow-[0_40px_120px_rgba(0,0,0,0.42)] backdrop-blur-2xl'>
+              <div className='h-full overflow-hidden rounded-[28px] border border-white/10 bg-[#0d111c]'>
+                <div className='flex h-12 items-center justify-between border-b border-white/10 px-5'>
+                  <div className='flex gap-2'>
+                    <span className='h-3 w-3 rounded-full bg-white/25' />
+                    <span className='h-3 w-3 rounded-full bg-white/15' />
+                    <span className='h-3 w-3 rounded-full bg-white/10' />
+                  </div>
+                  <div className='h-2 w-28 rounded-full bg-white/10' />
+                </div>
+
+                <div className='grid h-[calc(100%-48px)] grid-cols-[0.72fr_1fr] gap-4 p-5'>
+                  <div className='space-y-4'>
+                    <div className='rounded-2xl border border-white/10 bg-white/[0.06] p-4'>
+                      <div className='mb-4 h-3 w-24 rounded-full bg-white/20' />
+                      <div className='space-y-2'>
+                        <div className='h-2 rounded-full bg-white/12' />
+                        <div className='h-2 w-3/4 rounded-full bg-white/10' />
+                      </div>
+                    </div>
+                    <div className='rounded-2xl border border-white/10 bg-white/[0.04] p-4'>
+                      <div className='mb-4 h-3 w-20 rounded-full bg-white/16' />
+                      <div className='grid grid-cols-2 gap-2'>
+                        <div className='h-14 rounded-xl bg-white/10' />
+                        <div className='h-14 rounded-xl bg-white/[0.06]' />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className='relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-5'>
+                    <div className='absolute right-6 top-6 h-28 w-28 rounded-full bg-white/15 blur-2xl' />
+                    <div className='relative z-10'>
+                      <div className='mb-5 h-4 w-36 rounded-full bg-white/22' />
+                      <div className='mb-6 h-20 rounded-3xl bg-gradient-to-br from-white/20 to-white/[0.04]' />
+                      <div className='space-y-3'>
+                        {["Ambiguous product requirements", "Complex state and API flows", "Reusable frontend systems"].map((item) => (
+                          <div key={item} className='flex items-center justify-between rounded-2xl bg-black/20 px-4 py-3'>
+                            <span className='text-[12px] font-medium text-white/70'>{item}</span>
+                            <span className='h-2 w-2 rounded-full bg-white/60' />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
       </div>
     </section>
   );

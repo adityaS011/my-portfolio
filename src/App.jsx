@@ -6,8 +6,8 @@ import Certifications from "./components/Certifications";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-slate-900 bg-cover bg-no-repeat bg-center'>
+      <div className='relative z-0 bg-[#080a12]'>
+        <div className='bg-[#050816] bg-cover bg-no-repeat bg-center'>
           <Navbar />
           <Hero />
         </div>
