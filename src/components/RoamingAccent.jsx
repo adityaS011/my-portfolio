@@ -9,7 +9,6 @@ const RoamingAccent = () => {
         role='img'
         focusable='false'
       >
-        <circle className='roaming-accent__backplate' cx='48' cy='48' r='34' />
         <circle className='roaming-accent__halo' cx='48' cy='48' r='25' />
         <g className='roaming-accent__react-mark'>
           <ellipse cx='48' cy='48' rx='34' ry='13' />

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types, react-refresh/only-export-components */
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";

@@ -45,12 +45,6 @@
     drop-shadow(0 14px 24px rgba(0, 0, 0, 0.48));
 }
 
-.roaming-accent__backplate {
-  fill: rgba(5, 8, 22, 0.82);
-  stroke: rgba(255, 255, 255, 0.18);
-  stroke-width: 1.5;
-}
-
 .roaming-accent__halo {
   fill: rgba(97, 218, 251, 0.2);
   stroke: rgba(215, 250, 255, 0.72);
@@ -99,25 +93,25 @@
 
 @keyframes accent-roam {
   0% {
-    transform: translate3d(9vw, 78vh, 0) rotate(-8deg);
+    transform: translate3d(4vw, 82vh, 0) rotate(-8deg);
   }
-  18% {
-    transform: translate3d(39vw, 64vh, 0) rotate(6deg);
+  14% {
+    transform: translate3d(86vw, 80vh, 0) rotate(12deg);
   }
-  34% {
-    transform: translate3d(78vw, 73vh, 0) rotate(14deg);
+  30% {
+    transform: translate3d(88vw, 18vh, 0) rotate(-10deg);
   }
-  53% {
-    transform: translate3d(60vw, 34vh, 0) rotate(-12deg);
+  47% {
+    transform: translate3d(7vw, 16vh, 0) rotate(15deg);
   }
-  70% {
-    transform: translate3d(18vw, 46vh, 0) rotate(-18deg);
+  64% {
+    transform: translate3d(10vw, 68vh, 0) rotate(-18deg);
   }
-  86% {
-    transform: translate3d(38vw, 20vh, 0) rotate(10deg);
+  82% {
+    transform: translate3d(78vw, 40vh, 0) rotate(8deg);
   }
   100% {
-    transform: translate3d(9vw, 78vh, 0) rotate(-8deg);
+    transform: translate3d(4vw, 82vh, 0) rotate(-8deg);
   }
 }
 
