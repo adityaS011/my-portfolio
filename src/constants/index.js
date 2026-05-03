@@ -33,6 +33,7 @@ import {
     rapidr,
     trackly,
     threejs,
+    carewise,
 } from "../assets";
 
 export const navLinks = [{
@@ -59,7 +60,7 @@ export const navLinks = [{
 ];
 
 const services = [{
-        title: "Startup Frontend Engineer",
+        title: "Frontend Engineer",
         icon: web,
         link: "#projects"
     },
@@ -178,7 +179,7 @@ const experiences = [{
 const testimonials = [{
         testimonial: "I am comfortable building in the messy middle of early-stage products, where requirements change and the frontend still has to feel dependable.",
         name: "Startup Execution",
-        designation: "SaaS and FinTech product teams",
+        designation: "SaaS, FinTech, and Big Tech product teams",
         company: "",
         image: "",
     },
@@ -272,10 +273,58 @@ const projects = [{
         source_code_link: "https://vibe-club-nine.vercel.app/",
     },
     {
+        name: "CareWise Healthcare SaaS",
+        description: "B2B healthcare SaaS demo with authentication, analytics dashboard, patient management, and notification system for healthcare providers.",
+        highlights: ["Healthcare domain expertise", "B2B SaaS architecture", "Auth and analytics integration"],
+        tags: [{
+                name: "Next.js",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Healthcare",
+                color: "green-text-gradient",
+            },
+            {
+                name: "B2B SaaS",
+                color: "orange-text-gradient",
+            },
+            {
+                name: "Vercel",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: carewise,
+        source_code_link: "https://carewise-chi.vercel.app/",
+    },
+    {
         name: "Ecommerce Clone",
         description: "MERN ecommerce clone with product browsing, cart-style flows, and a responsive marketplace interface inspired by real online shopping behavior.",
         highlights: ["MERN stack implementation", "Marketplace-style UI", "Responsive shopping flows"],
 
+        tags: [{
+                name: "react",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "mongodb",
+                color: "green-text-gradient",
+            },
+            {
+                name: "expressJs",
+                color: "orange-text-gradient",
+            },
+            {
+                name: "nodeJs",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: carrent,
+        source_code_link: "https://github.com/adityaS011/ecommerce-clone",
+    },
+    {
+        name: "Next.js Dasboard App",
+        description: "Developed a Dashboard with dynamic UI elements using React and Next.js for enhanced modularity and maintainability. Leveraged Next.js API Routes for facilitating efficient data fetching and handling.",
+        highlights: ["Reusable dashboard modules", "API route data fetching", "Clean data-heavy UI"],
         tags: [{
                 name: "react",
                 color: "blue-text-gradient",

@@ -66,7 +66,7 @@ const Experience = () => {
         <p className={`${styles.sectionSubText} text-center`}>
           Experience
         </p>
-        <h2 className='text-center text-white font-black tracking-tight md:text-[72px] sm:text-[56px] xs:text-[44px] text-[34px] leading-tight'>
+        <h2 className='text-center text-white font-black tracking-tight md:text-[60px] sm:text-[48px] xs:text-[38px] text-[30px] leading-tight'>
           Frontend product work.
         </h2>
       </motion.div>

@@ -36,6 +36,7 @@ import dashboard from "./dashboard.png";
 import flowai from "./flowai.png";
 import rapidr from "./rapidr.png"
 import trackly from "./trackly.png";
+import carewise from "./carewise.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
@@ -65,6 +66,7 @@ export {
   flowai,
   rapidr,
   trackly,
+  carewise,
   javascript,
   mongodb,
   nodejs,

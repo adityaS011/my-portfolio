@@ -39,7 +39,7 @@ const Hero = () => {
             <p className='mb-5 text-[12px] sm:text-[14px] uppercase tracking-[0.28em] text-white/55'>
               Frontend Engineer | SaaS + FinTech Startups
             </p>
-            <h1 className='text-[48px] font-black leading-[0.95] tracking-tight text-white xs:text-[60px] sm:text-[84px] lg:text-[108px]'>
+            <h1 className='text-[42px] font-black leading-[0.95] tracking-tight text-white xs:text-[54px] sm:text-[76px] lg:text-[96px]'>
               Hi, I&apos;m Aditya.
             </h1>
             <p className='mx-auto mt-6 max-w-3xl text-[19px] font-medium leading-8 text-white/66 sm:text-[24px] sm:leading-9'>
@@ -83,7 +83,7 @@ const Hero = () => {
             <p className='mb-3 text-[12px] uppercase tracking-[0.28em] text-white/45'>
               How I Work
             </p>
-            <h2 className='text-[32px] font-black leading-[1.02] tracking-tight text-white xs:text-[42px] sm:text-[56px] xl:text-[62px]'>
+            <h2 className='text-[28px] font-black leading-[1.04] tracking-tight text-white xs:text-[38px] sm:text-[50px] xl:text-[56px]'>
               I turn product complexity into calm frontend experiences.
             </h2>
             <p className='mt-4 max-w-xl text-[15px] leading-7 text-white/60 sm:text-[16px] sm:leading-7'>
@@ -108,7 +108,7 @@ const Hero = () => {
 
           <motion.div
             style={{ scale: deviceScale, rotate: deviceRotate }}
-            className='relative mx-auto aspect-[4/3] w-full max-w-[500px] lg:max-w-[610px] xl:max-w-[660px]'
+            className='relative mx-auto hidden aspect-[4/3] w-full max-w-[500px] lg:block lg:max-w-[610px] xl:max-w-[660px]'
           >
             <div className='absolute inset-0 rounded-[38px] border border-white/15 bg-white/[0.05] p-3 shadow-[0_40px_120px_rgba(0,0,0,0.42)] backdrop-blur-2xl'>
               <div className='h-full overflow-hidden rounded-[28px] border border-white/10 bg-[#0d111c]'>

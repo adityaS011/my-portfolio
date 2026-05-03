@@ -47,12 +47,12 @@ const Feedbacks = () => {
       >
         <motion.div variants={textVariant()}>
           <p className={`${styles.sectionSubText} text-white/45`}>Positioning</p>
-          <h2 className='text-white font-black tracking-tight md:text-[72px] sm:text-[56px] xs:text-[44px] text-[34px] leading-tight'>
+          <h2 className='text-white font-black tracking-tight md:text-[60px] sm:text-[48px] xs:text-[38px] text-[30px] leading-tight'>
             Why I can operate well in product teams.
           </h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+      <div className={`-mt-20 pt-4 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}

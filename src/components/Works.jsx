@@ -86,7 +86,7 @@ const Works = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-white/45`}>Selected work</p>
-        <h2 className='max-w-4xl text-white font-black tracking-tight md:text-[72px] sm:text-[56px] xs:text-[44px] text-[34px] leading-tight'>
+        <h2 className='max-w-4xl text-white font-black tracking-tight md:text-[60px] sm:text-[48px] xs:text-[38px] text-[30px] leading-tight'>
           Frontend work with startup instincts.
         </h2>
       </motion.div>
