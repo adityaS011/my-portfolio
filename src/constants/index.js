@@ -1,11 +1,8 @@
 import {
-    mobile,
     backend,
-    creator,
     web,
     javascript,
     typescript,
-    html,
     linkedin,
     css,
     reactjs,
@@ -15,9 +12,6 @@ import {
     mongodb,
     git,
     github1,
-    figma,
-    docker,
-    meta,
     starbucks,
     tesla,
     shopify,
@@ -26,13 +20,11 @@ import {
     certificatefcc,
     vibeclub,
     carrent,
-    jobit,
     tripguide,
     dashboard,
     flowai,
     rapidr,
     trackly,
-    threejs,
     carewise,
 } from "../assets";
 
@@ -301,30 +293,6 @@ const projects = [{
         description: "MERN ecommerce clone with product browsing, cart-style flows, and a responsive marketplace interface inspired by real online shopping behavior.",
         highlights: ["MERN stack implementation", "Marketplace-style UI", "Responsive shopping flows"],
 
-        tags: [{
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "mongodb",
-                color: "green-text-gradient",
-            },
-            {
-                name: "expressJs",
-                color: "orange-text-gradient",
-            },
-            {
-                name: "nodeJs",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: carrent,
-        source_code_link: "https://github.com/adityaS011/ecommerce-clone",
-    },
-    {
-        name: "Next.js Dasboard App",
-        description: "Developed a Dashboard with dynamic UI elements using React and Next.js for enhanced modularity and maintainability. Leveraged Next.js API Routes for facilitating efficient data fetching and handling.",
-        highlights: ["Reusable dashboard modules", "API route data fetching", "Clean data-heavy UI"],
         tags: [{
                 name: "react",
                 color: "blue-text-gradient",

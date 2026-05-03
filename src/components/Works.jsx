@@ -1,4 +1,5 @@
-import {Tilt} from "react-tilt";
+/* eslint-disable react/prop-types, react-refresh/only-export-components */
+import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -12,12 +13,12 @@ const ProjectCard = ({
   name,
   description,
   highlights = [],
-  tags,
+  tags = [],
   image,
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", Math.min(index * 0.12, 0.6), 0.75)}>
       <Tilt
         options={{
           max: 45,
@@ -34,10 +35,7 @@ const ProjectCard = ({
           />
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              
-              className='w-10 h-10 rounded-full flex justify-center items-center'
-            >
+            <div className='w-10 h-10 rounded-full flex justify-center items-center'>
               <img
                 src={github}
                 alt='source code'
