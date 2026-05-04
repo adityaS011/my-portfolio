@@ -58,7 +58,13 @@ const Navbar = () => {
               } hover:text-white text-[13px] font-medium cursor-pointer transition-colors`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a
+                href={nav.href ?? `#${nav.id}`}
+                target={nav.href ? "_blank" : undefined}
+                rel={nav.href ? "noreferrer" : undefined}
+              >
+                {nav.title}
+              </a>
             </li>
             
           ))}
@@ -90,7 +96,13 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a
+                    href={nav.href ?? `#${nav.id}`}
+                    target={nav.href ? "_blank" : undefined}
+                    rel={nav.href ? "noreferrer" : undefined}
+                  >
+                    {nav.title}
+                  </a>
                 </li>
               ))}
               
