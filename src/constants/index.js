@@ -57,12 +57,12 @@ export const navLinks = [{
 ];
 
 const services = [{
-        title: "Frontend Engineer",
+        title: "Full Stack Engineering",
         icon: web,
         link: "#projects"
     },
     {
-        title: "Product UI Systems",
+        title: "Product UI + APIs",
         icon: backend,
         link: "#experience"
     },
@@ -125,7 +125,7 @@ const experiences = [{
         iconBg: "#E6DEDD",
         date: "Product Frontend Work",
         points: [
-            "Built product-facing SaaS frontend features in an early-stage startup environment where requirements evolved quickly.",
+            "Built product-facing SaaS frontend features in a fast-moving product environment where requirements evolved quickly.",
             "Translated product and design intent into responsive React UI with clear hierarchy, reusable patterns, and consistent interaction states.",
             "Integrated API-driven workflows with thoughtful loading, empty, error, and success states so product screens felt reliable.",
             "Improved frontend quality through iterative UI fixes, usability refinements, and practical component-level decisions."
@@ -138,7 +138,7 @@ const experiences = [{
         iconBg: "#383E56",
         date: "April 2024 - September 2024",
         points: [
-            "Shipped production frontend features for an early-stage FinTech product using Next.js, React, TypeScript, and Tailwind CSS.",
+            "Shipped production frontend features for a FinTech product using Next.js, React, TypeScript, and Tailwind CSS.",
             "Handled complex financial UI flows with Redux, Jotai, and Context API, improving how data moved through the app.",
             "Integrated REST APIs for real-time financial updates while keeping screens clear, responsive, and predictable.",
             "Built form-heavy workflow interfaces with careful validation, state handling, and user-friendly edge-case behavior."
@@ -174,23 +174,23 @@ const experiences = [{
 ];
 
 const testimonials = [{
-        testimonial: "I am comfortable building in the messy middle of early-stage products, where requirements change and the frontend still has to feel dependable.",
-        name: "Startup Execution",
-        designation: "SaaS, FinTech, and Big Tech product teams",
+        testimonial: "I am strongest where frontend meets product judgment: translating ambiguous workflows into clear, dependable interfaces.",
+        name: "Product Ownership",
+        designation: "User flows, edge cases, and delivery",
         company: "",
         image: "",
     },
     {
         testimonial: "I think beyond screens: component patterns, API states, empty states, loading behavior, and the details that make product UI feel mature.",
-        name: "Frontend Judgment",
-        designation: "UI architecture and product polish",
+        name: "Frontend Depth",
+        designation: "React, TypeScript, UI architecture",
         company: "",
         image: "",
     },
     {
-        testimonial: "Atomicwork gave me SaaS velocity. Mysa gave me FinTech precision. That mix is the advantage I bring to frontend roles.",
-        name: "Domain Range",
-        designation: "SaaS velocity plus FinTech precision",
+        testimonial: "My projects connect frontend polish with full-stack and AI workflows: React interfaces, Node.js APIs, MongoDB data models, and workflow UIs.",
+        name: "Full-Stack Range",
+        designation: "Node.js, MongoDB, APIs, AI workflows",
         company: "",
         image: "",
     },
@@ -198,8 +198,8 @@ const testimonials = [{
 
 const projects = [{
         name: "FlowAI Workflow Builder",
-        description: "Visual workflow builder for designing AI-powered automation flows. Built for fast node editing, clear task sequencing, responsive layouts, and polished frontend interactions.",
-        highlights: ["Interactive workflow canvas", "AI automation use case", "Deployed production demo"],
+        description: "Visual workflow builder for designing AI-powered automation flows. Built for fast node editing, clear task sequencing, responsive layouts, and product-grade frontend interactions.",
+        highlights: ["Interactive AI workflow canvas", "Product engineer AI use case", "Deployed production demo"],
         tags: [{
                 name: "React",
                 color: "blue-text-gradient",

@@ -40,9 +40,9 @@ const ServiceCard = ({ index, title, icon, link }) => (
 
 const About = () => {
   const strengths = [
-    "Early-stage SaaS experience at Atomicwork, building product-facing frontend surfaces where speed, clarity, and iteration matter.",
-    "FinTech product experience at Mysa, working on detail-heavy flows where state, validation, API reliability, and UI precision matter.",
-    "Comfortable owning frontend work through ambiguity: clarifying requirements, shaping UI states, integrating APIs, and polishing the final experience.",
+    "Frontend depth in React, Next.js, TypeScript, Tailwind, state management, responsive UI, and component-driven product surfaces.",
+    "Product engineering range across SaaS and FinTech workflows, where user flows, validation, API reliability, and UI precision matter.",
+    "Full-stack foundations through Node.js, MongoDB, API-driven interfaces, workflow builders, and practical AI product demos.",
   ];
 
   return (
@@ -50,7 +50,7 @@ const About = () => {
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-white/45`}>Introduction</p>
         <h2 className='max-w-4xl text-white font-black tracking-tight md:text-[60px] sm:text-[48px] xs:text-[38px] text-[30px] leading-tight'>
-          Frontend engineer for product teams.
+          Frontend engineer who builds product-quality web apps.
         </h2>
       </motion.div>
 
@@ -58,12 +58,11 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-5 text-white/60 text-[18px] max-w-3xl leading-[32px]'
       >
-        I am a frontend engineer who has worked inside early-stage SaaS and
-        FinTech teams, where product requirements move fast and the UI still
-        has to feel stable, clear, and trustworthy. I care about the whole
-        frontend surface: component design, state management, API integration,
-        edge cases, responsiveness, and the interaction details that make a
-        product feel mature.
+        I am a frontend engineer focused on product-quality web experiences:
+        React, Next.js, TypeScript, state management, API integration,
+        responsiveness, and the interaction details that make software feel
+        clear and dependable. I also work with Node.js, MongoDB, and AI
+        workflow interfaces when the product needs more than the UI layer.
       </motion.p>
 
       <div className='mt-16 grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-3'>

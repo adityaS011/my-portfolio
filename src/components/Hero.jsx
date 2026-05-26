@@ -10,9 +10,9 @@ const Hero = () => {
   });
 
   const stats = [
-    { value: "Judgment", label: "turning ambiguity into clear UI" },
-    { value: "Architecture", label: "state, APIs, reusable systems" },
-    { value: "Polish", label: "responsive, trustworthy product UX" },
+    { value: "Frontend", label: "React, TypeScript, product UI" },
+    { value: "Product", label: "UX judgment, states, workflows" },
+    { value: "Full stack", label: "APIs, Node.js, AI integrations" },
   ];
 
   const introOpacity = useTransform(scrollYProgress, [0, 0.32], [1, 0]);
@@ -37,15 +37,15 @@ const Hero = () => {
         >
           <div className='max-w-5xl'>
             <p className='mb-5 text-[12px] sm:text-[14px] uppercase tracking-[0.28em] text-white/55'>
-              Frontend Engineer | SaaS + FinTech Startups
+              Full Stack Engineer | React, TypeScript, Node.js
             </p>
             <h1 className='text-[42px] font-black leading-[0.95] tracking-tight text-white xs:text-[54px] sm:text-[76px] lg:text-[96px]'>
               Hi, I&apos;m Aditya.
             </h1>
             <p className='mx-auto mt-6 max-w-3xl text-[19px] font-medium leading-8 text-white/66 sm:text-[24px] sm:leading-9'>
-              I build product interfaces for early-stage startups, turning
-              ambiguous requirements into reliable React experiences across
-              SaaS workflows, FinTech flows, APIs, state, and responsive UI.
+              I build polished web experiences with React, Next.js, TypeScript,
+              Tailwind CSS, API integration, state management, Node.js, MongoDB,
+              and AI-powered workflow interfaces.
             </p>
 
             <div className='mt-9 flex flex-wrap justify-center gap-3'>
@@ -84,13 +84,13 @@ const Hero = () => {
               How I Work
             </p>
             <h2 className='text-[28px] font-black leading-[1.04] tracking-tight text-white xs:text-[38px] sm:text-[50px] xl:text-[56px]'>
-              I turn product complexity into calm frontend experiences.
+              I turn product complexity into usable, reliable interfaces.
             </h2>
             <p className='mt-4 max-w-xl text-[15px] leading-7 text-white/60 sm:text-[16px] sm:leading-7'>
               My edge is not just building screens. It is understanding the
               product problem, designing the right UI states, wiring data
               carefully, handling edge cases, and making the final experience
-              feel stable under real startup pressure.
+              feel stable in real production workflows.
             </p>
 
             <div className='mt-5 grid gap-3 sm:grid-cols-3'>
@@ -145,7 +145,7 @@ const Hero = () => {
                       <div className='mb-5 h-4 w-36 rounded-full bg-white/22' />
                       <div className='mb-6 h-20 rounded-3xl bg-gradient-to-br from-white/20 to-white/[0.04]' />
                       <div className='space-y-3'>
-                        {["Ambiguous product requirements", "Complex state and API flows", "Reusable frontend systems"].map((item) => (
+                        {["Ambiguous product requirements", "Complex state and API flows", "AI workflow interfaces"].map((item) => (
                           <div key={item} className='flex items-center justify-between rounded-2xl bg-black/20 px-4 py-3'>
                             <span className='text-[12px] font-medium text-white/70'>{item}</span>
                             <span className='h-2 w-2 rounded-full bg-white/60' />

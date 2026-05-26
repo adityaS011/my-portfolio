@@ -85,7 +85,7 @@ const Works = () => {
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-white/45`}>Selected work</p>
         <h2 className='max-w-4xl text-white font-black tracking-tight md:text-[60px] sm:text-[48px] xs:text-[38px] text-[30px] leading-tight'>
-          Frontend work with startup instincts.
+          Product interfaces, AI workflows, and full-stack builds.
         </h2>
       </motion.div>
 
@@ -94,9 +94,10 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-5 text-white/60 text-[18px] max-w-3xl leading-[32px]'
         >
-          Selected work that shows how I think through product UI: responsive
-          layouts, reusable components, API-driven states, and practical
-          frontend decisions across React, Next.js, TypeScript, and MERN.
+          Selected work that shows how I think through product UI and ship
+          complete experiences: responsive layouts, reusable components,
+          API-driven states, AI workflow interfaces, and practical frontend
+          decisions across React, Next.js, TypeScript, Node.js, and MERN.
         </motion.p>
       </div>
 
