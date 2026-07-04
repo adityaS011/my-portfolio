@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types, react-refresh/only-export-components */
+import { useEffect, useState } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
+import { projects, certificates } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import Carousel from "./Carousel";
 
 const ProjectCard = ({
   index,
@@ -79,32 +81,91 @@ const ProjectCard = ({
   );
 };
 
+const TAB_COPY = {
+  projects: {
+    subhead: "Selected work",
+    heading: "Product interfaces, AI workflows, and full-stack builds.",
+    paragraph:
+      "Selected work that shows how I think through product UI and ship complete experiences: responsive layouts, reusable components, API-driven states, AI workflow interfaces, and practical frontend decisions across React, Next.js, TypeScript, Node.js, and MERN.",
+  },
+  certifications: {
+    subhead: "Credentials",
+    heading: "Certifications",
+    paragraph:
+      "Courses and credentials that back the fundamentals: React, JavaScript, and responsive web design.",
+  },
+};
+
 const Works = () => {
+  const [activeTab, setActiveTab] = useState(() =>
+    typeof window !== "undefined" && window.location.hash === "#certifications"
+      ? "certifications"
+      : "projects"
+  );
+
+  useEffect(() => {
+    const onHashChange = () => {
+      setActiveTab(window.location.hash === "#certifications" ? "certifications" : "projects");
+    };
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
+  const selectTab = (tab) => {
+    setActiveTab(tab);
+    window.history.replaceState(null, "", tab === "certifications" ? "#certifications" : "#projects");
+  };
+
+  const items = activeTab === "projects" ? projects : certificates;
+  const copy = TAB_COPY[activeTab];
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-white/45`}>Selected work</p>
+        <p className={`${styles.sectionSubText} text-white/45`}>{copy.subhead}</p>
         <h2 className='max-w-4xl text-white font-black tracking-tight md:text-[60px] sm:text-[48px] xs:text-[38px] text-[30px] leading-tight'>
-          Product interfaces, AI workflows, and full-stack builds.
+          {copy.heading}
         </h2>
       </motion.div>
 
-      <div className='w-full flex' id="projects">
+      <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-5 text-white/60 text-[18px] max-w-3xl leading-[32px]'
         >
-          Selected work that shows how I think through product UI and ship
-          complete experiences: responsive layouts, reusable components,
-          API-driven states, AI workflow interfaces, and practical frontend
-          decisions across React, Next.js, TypeScript, Node.js, and MERN.
+          {copy.paragraph}
         </motion.p>
       </div>
 
-      <div className='mt-10 flex flex-wrap gap-4 sm:mt-20 sm:gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+      <div className='mt-8 inline-flex gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 backdrop-blur-xl'>
+        <button
+          type='button'
+          onClick={() => selectTab("projects")}
+          className={`rounded-full px-4 py-1.5 text-[13px] font-medium transition ${
+            activeTab === "projects" ? "bg-white text-black" : "text-white/60 hover:text-white"
+          }`}
+        >
+          Projects
+        </button>
+        <button
+          type='button'
+          onClick={() => selectTab("certifications")}
+          className={`rounded-full px-4 py-1.5 text-[13px] font-medium transition ${
+            activeTab === "certifications" ? "bg-white text-black" : "text-white/60 hover:text-white"
+          }`}
+        >
+          Certifications
+        </button>
+      </div>
+
+      <span className='hash-span' id='certifications'>&nbsp;</span>
+
+      <div className='mt-6 sm:mt-10'>
+        <Carousel ariaLabel={activeTab === "projects" ? "Projects" : "Certifications"}>
+          {items.map((item, index) => (
+            <ProjectCard key={`${activeTab}-${index}`} index={index} {...item} />
+          ))}
+        </Carousel>
       </div>
     </>
   );

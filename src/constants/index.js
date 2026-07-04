@@ -380,19 +380,10 @@ const projects = [{
 const certificates = [{
         name: "Coursera",
         description: "React Basics -Meta",
-        tags: [{
-                name: "",
-                color: "",
-            },
-            {
-                name: "",
-                color: "",
-            },
-            {
-                name: "",
-                color: "",
-            },
-
+        highlights: ["Issued by Coursera / Meta", "Verified credential"],
+        tags: [
+            { name: "React" },
+            { name: "Meta" },
         ],
         image: certificatereactb,
         source_code_link: "https://coursera.org/verify/VNEXQTQEGCBX",
@@ -400,18 +391,10 @@ const certificates = [{
     {
         name: "Coursera",
         description: "Programming with JavaScript-Meta",
-        tags: [{
-                name: "",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "",
-                color: "green-text-gradient",
-            },
-            {
-                name: "",
-                color: "orange-text-gradient",
-            },
+        highlights: ["Issued by Coursera / Meta", "Verified credential"],
+        tags: [
+            { name: "JavaScript" },
+            { name: "Meta" },
         ],
         image: certificatejs,
         source_code_link: "https://coursera.org/verify/AQP39JQY4EZT",
@@ -420,18 +403,11 @@ const certificates = [{
     {
         name: "FreeCodeCamp",
         description: "Responsive Designing with HTML, CSS",
-        tags: [{
-                name: "",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "",
-                color: "green-text-gradient",
-            },
-            {
-                name: "",
-                color: "orange-text-gradient",
-            },
+        highlights: ["Issued by FreeCodeCamp", "Verified credential"],
+        tags: [
+            { name: "HTML" },
+            { name: "CSS" },
+            { name: "Responsive Design" },
         ],
         image: certificatefcc,
         source_code_link: "https://www.freecodecamp.org/certification/AD_011/responsive-web-design",

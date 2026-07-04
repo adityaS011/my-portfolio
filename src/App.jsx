@@ -1,7 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
-import Certifications from "./components/Certifications";
 import RoamingAccent from "./components/RoamingAccent";
 
 const App = () => {
@@ -15,8 +14,7 @@ const App = () => {
         <About />
         <Experience />
         <Tech />
-        <Works id="Projects" />
-        <Certifications />
+        <Works />
         <Feedbacks />
         <div className='relative z-0'>
           <Contact />

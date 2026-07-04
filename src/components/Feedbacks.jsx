@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
+import Carousel from "./Carousel";
 
 const FeedbackCard = ({
   index,
@@ -53,10 +54,12 @@ const Feedbacks = () => {
           </h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pt-4 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
+      <div className={`-mt-20 pt-4 pb-14 ${styles.paddingX}`}>
+        <Carousel ariaLabel='Testimonials'>
+          {testimonials.map((testimonial, index) => (
+            <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+          ))}
+        </Carousel>
       </div>
     </div>
   );

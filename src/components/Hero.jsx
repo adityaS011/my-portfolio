@@ -15,16 +15,16 @@ const Hero = () => {
     { value: "Full stack", label: "APIs, Node.js, AI integrations" },
   ];
 
-  const introOpacity = useTransform(scrollYProgress, [0, 0.32], [1, 0]);
-  const introY = useTransform(scrollYProgress, [0, 0.32], [0, -52]);
-  const showcaseOpacity = useTransform(scrollYProgress, [0.2, 0.42, 0.95], [0, 1, 1]);
-  const showcaseY = useTransform(scrollYProgress, [0.2, 0.42], [80, 0]);
-  const deviceScale = useTransform(scrollYProgress, [0.25, 0.68, 1], [0.82, 1.04, 0.98]);
-  const deviceRotate = useTransform(scrollYProgress, [0.25, 0.68, 1], [-7, 0, 4]);
-  const glowOpacity = useTransform(scrollYProgress, [0, 0.55, 1], [0.16, 0.42, 0.2]);
+  const introOpacity = useTransform(scrollYProgress, [0, 0.24], [1, 0]);
+  const introY = useTransform(scrollYProgress, [0, 0.24], [0, -52]);
+  const showcaseOpacity = useTransform(scrollYProgress, [0.15, 0.315, 0.71], [0, 1, 1]);
+  const showcaseY = useTransform(scrollYProgress, [0.15, 0.315], [80, 0]);
+  const deviceScale = useTransform(scrollYProgress, [0.19, 0.51, 1], [0.82, 1.04, 0.98]);
+  const deviceRotate = useTransform(scrollYProgress, [0.19, 0.51, 1], [-7, 0, 4]);
+  const glowOpacity = useTransform(scrollYProgress, [0, 0.41, 1], [0.16, 0.42, 0.2]);
 
   return (
-    <section ref={heroRef} className='relative h-[220vh] w-full bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.16),rgba(5,8,22,0)_34%),linear-gradient(180deg,#050816_0%,#080a12_100%)]'>
+    <section ref={heroRef} className='relative h-[165vh] w-full bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.16),rgba(5,8,22,0)_34%),linear-gradient(180deg,#050816_0%,#080a12_100%)]'>
       <div className='sticky top-0 h-screen overflow-hidden'>
         <motion.div
           style={{ opacity: glowOpacity }}
